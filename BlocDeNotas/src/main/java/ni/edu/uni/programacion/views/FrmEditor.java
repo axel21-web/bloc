@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ni.edu.uni.programacion.views;
 
 import java.io.*;
-import javax.swing.JFileChooser;
+import javax.swing.*;
 import javax.swing.JOptionPane;
 import ni.edu.uni.programacion.views.panels.PnlTextEditor;
 import say.swing.JFontChooser;
 
 /**
  *
- * @author Sistemas-05
+ * @author Axel Moreno
  */
-public class FrmEditor extends javax.swing.JFrame {
+public class FrmEditor extends javax.swing.JFrame
+{
 
     private File Archivo;
     private String Texto;
@@ -29,7 +25,8 @@ public class FrmEditor extends javax.swing.JFrame {
     /**
      * Creates new form FrmEditor
      */
-    public FrmEditor() {
+    public FrmEditor() 
+    {
         initComponents();
     }
 
@@ -159,7 +156,7 @@ public class FrmEditor extends javax.swing.JFrame {
 		    PW.write(pnlTextEditor.getTextPaneEditor().getText());
 		    BW.close();
 		    PW.close();
-		    JOptionPane.showMessageDialog(null, "Archivo Guardado con éxito");
+		    JOptionPane.showMessageDialog(null, "EL Archivo Se Guardado Con éxito");
 	    } catch (IOException ex) {
 	    }
     }//GEN-LAST:event_mniSaveActionPerformed
@@ -188,7 +185,7 @@ public class FrmEditor extends javax.swing.JFrame {
 			}
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "Archivo no compatible");
+			JOptionPane.showMessageDialog(null, "EL Archivo No Es Compatible");
 		}
     }//GEN-LAST:event_mniOpenActionPerformed
 
@@ -205,7 +202,7 @@ public class FrmEditor extends javax.swing.JFrame {
         private void mniFuenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniFuenteActionPerformed
 		PnlTextEditor pnlTextEditor = (PnlTextEditor) tbpContent.getSelectedComponent();
 		JFontChooser fc = new JFontChooser();
-		JOptionPane.showMessageDialog(null, fc, "Elija una fuente", JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(null, fc, "Elija Su Fuente", JOptionPane.PLAIN_MESSAGE);
 		pnlTextEditor.getTextPaneEditor().setFont(fc.getSelectedFont());
         }//GEN-LAST:event_mniFuenteActionPerformed
 

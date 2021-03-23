@@ -6,8 +6,6 @@
 package ni.edu.uni.programacion.views;
 
 import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import ni.edu.uni.programacion.views.panels.PnlTextEditor;

@@ -5,6 +5,7 @@
  */
 package ni.edu.uni.programacion.views;
 
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,6 +17,7 @@ public class newFramer extends javax.swing.JFrame {
 
     private final int max = 100;
     private final int min = 1;
+    
     /**
      * Creates new form newFramer
      */
@@ -53,9 +55,19 @@ public class newFramer extends javax.swing.JFrame {
         jPanel1.add(btnStart);
 
         btnPause.setText("Pause");
+        btnPause.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPauseActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnPause);
 
         btnStop.setText("Stop");
+        btnStop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStopActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnStop);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_END);
@@ -83,6 +95,15 @@ public class newFramer extends javax.swing.JFrame {
        
     }//GEN-LAST:event_btnStartActionPerformed
 
+    private void btnPauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPauseActionPerformed
+    
+        
+    }//GEN-LAST:event_btnPauseActionPerformed
+
+    private void btnStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStopActionPerformed
+       
+    }//GEN-LAST:event_btnStopActionPerformed
+
     
     private class FillProgressBarProcess extends Thread{
 
@@ -101,6 +122,8 @@ public class newFramer extends javax.swing.JFrame {
            }
         }       
     }
+    
+    
     /**
      * @param args the command line arguments
      */
